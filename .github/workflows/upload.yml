@@ -32,6 +32,7 @@ jobs:
         run: | 
           ver=$(cat config.json | grep version | grep -o "[\.0-9]*")
           echo "VERSION=$ver" >> $GITHUB_ENV
+          echo "test"
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
