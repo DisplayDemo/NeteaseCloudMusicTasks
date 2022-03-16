@@ -26,7 +26,7 @@ jobs:
         run: |
           if [ -z "${{ secrets.SECRET_ID }}" ] || [ -z "${{ secrets.SECRET_KEY }}" ]; then
             echo "请配置 SECRET_ID 和 SECRET_KEY 两个 secrets"
-            echo -e "\033[1;31m部署失败 \033[0m"
+            echo -e "\033[1;31m部署失败。 \033[0m"
             exit 1
           fi   
       - name: Clone local repository
